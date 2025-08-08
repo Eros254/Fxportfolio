@@ -1,8 +1,21 @@
-# FX Portfolio
+# FxPortfolio
 
-A dark-themed trading portfolio showcasing Forex & CFD stats, built with HTML, CSS, and JavaScript.
+A personal Forex & CFD trading portfolio showcasing strategies, performance tracking, and a beginner-friendly "Learn to Trade" guide.
 
 ## Features
-- Dark mode UI
-- Live market data integration
-- Responsive design
+
+- Responsive design for mobile & desktop
+- Learn-to-trade section for beginners
+- Simple navigation
+- Ready for GitHub Pages hosting
+
+## Live Demo
+
+[View FxPortfolio](https://eros254.github.io/FxPortfolio/)
+
+## Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/eros254/FxPortfolio.git
+   ```
