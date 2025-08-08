@@ -1,91 +1,160 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ====== Base & Utilities ====== */
+:root{
+  --bg:#0d1117;
+  --panel:#12151a;
+  --muted:#9aa4b2;
+  --accent:#4cafef;
+  --accent-2:#00ff99;
+  --glass: rgba(255,255,255,0.03);
 }
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
-  color: #f1f1f1;
-  line-height: 1.6;
-}
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #121212, #1f1f1f);
-  text-align: center;
-  padding: 100px 20px;
-}
-.hero h1 {
-  font-size: 3rem;
-  color: #ffd700;
-}
-.hero p {
-  font-size: 1.3rem;
-  margin: 20px 0;
-  color: #ccc;
-}
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #ffd700;
-  color: #0f0f0f;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-.btn:hover {
-  background: #e6c200;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 
-/* Headings */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #ffd700;
-}
-h3 {
-  margin-top: 15px;
-  color: #f5f5f5;
+/* ====== Container ====== */
+.container{
+  width:94%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 12px;
 }
 
-/* Lists & Entries */
-ul {
-  list-style: disc;
-  padding-left: 20px;
+/* ====== Header ====== */
+.site-header{
+  background:var(--panel);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  position:sticky;
+  top:0;
+  z-index:999;
 }
-li {
-  margin-bottom: 10px;
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
 }
-.trade-entry {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border-left: 5px solid #ffd700;
-  border-radius: 5px;
+.brand .logo{
+  font-weight:700;
+  font-size:1.2rem;
+  letter-spacing:0.6px;
+}
+.brand .logo span{color:var(--accent)}
+.brand .tag{
+  font-size:0.8rem;
+  color:var(--muted);
+  margin-top:3px;
 }
 
-/* Contact Section */
-#contact p {
-  margin: 10px 0;
-  font-size: 1.1rem;
+/* Nav */
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.95rem;
+  padding:8px 6px;
+  border-radius:6px;
+}
+.nav a:hover{color:var(--accent)}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:1.2rem}
+
+/* ====== Hero ====== */
+.hero{
+  padding:58px 0;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+.hero-inner{ text-align:center; padding:16px 0; }
+.hero h1{ font-size:2.1rem; margin-bottom:10px; color:#fff; }
+.lead{ color:var(--muted); font-size:1.05rem; margin-bottom:18px }
+.hero-ctas{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  border:0;
+  cursor:pointer;
+  border-radius:8px;
+  padding:10px 16px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn-primary{ background:linear-gradient(90deg,var(--accent),#2ea1f7); color:#061422 }
+.btn-outline{ background:transparent; color:var(--accent); border:1px solid rgba(76,175,239,0.12) }
+.small{ padding:6px 8px; font-size:0.9rem }
+
+/* ====== Sections ====== */
+.section{ padding:48px 0; }
+.section h2{ color:var(--accent); font-size:1.4rem; margin-bottom:6px }
+.muted{ color:var(--muted) }
+
+/* ====== Portfolio cards ====== */
+.cards-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:18px}
+.card{
+  background:var(--panel);
+  padding:16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{ transform:translateY(-6px); box-shadow:0 8px 28px rgba(0,0,0,0.6) }
+
+/* ====== Learn grid ====== */
+.learn-grid{
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:20px;
+  align-items:start;
+}
+.modules{ display:flex; flex-direction:column; gap:12px }
+.module{
+  background:var(--panel);
+  padding:14px;
+  border-radius:10px;
+  border-left:4px solid rgba(0,0,0,0.2);
+}
+.module-head{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:8px }
+.module h3{ margin:0; font-size:1.05rem; color:var(--accent-2) }
+.mark-btn{
+  background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:8px 10px; border-radius:8px; cursor:pointer;
+}
+.mark-btn.marked{ background:linear-gradient(90deg,var(--accent),#2ea1f7); color:#061422; border:0 }
+
+/* ====== Right column ====== */
+.learn-cta{ display:flex; flex-direction:column; gap:14px }
+.progress-card, .download-card, .cta-card{
+  background:var(--panel); padding:14px; border-radius:10px;
+}
+.progress-bar{ background:var(--glass); height:12px; border-radius:8px; overflow:hidden; margin:10px 0 }
+#progressFill{ height:100%; width:0%; background:linear-gradient(90deg,var(--accent),#2ea1f7) }
+
+/* CFDs list */
+.cfds-list{ margin-top:12px; padding-left:18px }
+.cfds-list li{ margin-bottom:8px }
+
+/* Contact form */
+.contact-form{ display:grid; gap:12px; max-width:620px; margin-top:12px }
+.contact-form label{ display:flex; flex-direction:column; gap:6px; font-size:0.95rem; color:var(--muted) }
+.contact-form input, .contact-form textarea{
+  padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:#0b0f12; color:#eaf4ff;
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #888;
-  font-size: 0.9rem;
+.site-footer{ background:var(--panel); padding:18px 0; margin-top:36px; border-top:1px solid rgba(255,255,255,0.02) }
+.site-footer small{ color:var(--muted) }
+.site-footer .socials{ margin-top:8px; display:flex; gap:12px }
+
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+  .learn-grid{ grid-template-columns:1fr }
+  .nav{ display:none }
+  .menu-toggle{ display:block }
 }

@@ -1,63 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trader Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FxPortfolio — Trader & Educator</title>
+  <meta name="description" content="FxPortfolio — Trader portfolio, resources, and beginner Learn-to-Trade course (Forex & CFDs)." />
   <link rel="stylesheet" href="Fxportfolio.css" />
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Your Name Here</h1>
-    <p>Automating consistency. One trade at a time.</p>
-    <a href="#contact" class="btn">Connect with Me</a>
-  </section>
-
-  <!-- ABOUT ME -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      Trader with 5+ years of experience in Forex and CFDs. Skilled in secure system builds, automation, and consistent technical analysis. Merging tech and trading to simplify the path to profitability.
-    </p>
-  </section>
-
-  <!-- TOOLS & STRATEGY -->
-  <section id="tools" class="section">
-    <h2>Tools & Strategy</h2>
-    <ul>
-      <li><strong>MetaTrader / cTrader:</strong> Trade execution</li>
-      <li><strong>TradingView:</strong> Charting & analysis</li>
-      <li><strong>Python / JavaScript Bots:</strong> Backtesting & automation</li>
-      <li><strong>Kali Linux / VPS:</strong> Secure environments</li>
-      <li><strong>Risk Management:</strong> Capital preservation focus</li>
-    </ul>
-  </section>
-
-  <!-- TRADE JOURNAL -->
-  <section id="journal" class="section">
-    <h2>Trade Journal</h2>
-    <div class="trade-entry">
-      <h3>EUR/USD Breakout (Aug 2025)</h3>
-      <p><strong>Setup:</strong> Break & retest on 4H structure</p>
-      <p><strong>Result:</strong> +65 pips</p>
-      <p><strong>Notes:</strong> Confirmation with RSI divergence. High confidence setup.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">Currency<span>Ventures</span></div>
+        <div class="tag">Trader • Developer • Educator</div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#learn">Learn to Trade</a>
+        <a href="#cfds">CFDs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
     </div>
-    <!-- More entries can be added -->
-  </section>
+  </header>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Get In Touch</h2>
-    <p>Email: your.email@example.com</p>
-    <p>Telegram: @yourhandle</p>
-    <p>Instagram: @yourtraderpage</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Build skill. Trade smart. Automate better.</h1>
+        <p class="lead">I trade Forex & CFDs, build automation tools, and teach beginners how to trade with confidence.</p>
+        <div class="hero-ctas">
+          <a href="#learn" class="btn btn-primary">Start Learning</a>
+          <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Your Brand Name. All rights reserved.</p>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p class="muted">Selected projects, automation tools, and trading case studies.</p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Automated Backtester</h3>
+            <p>Custom JS/Python backtest engine used to validate rule-based strategies.</p>
+          </article>
+
+          <article class="card">
+            <h3>Secure VPS Trade Runner</h3>
+            <p>Hardened environment for running trading bots with SSH and monitoring.</p>
+          </article>
+
+          <article class="card">
+            <h3>Trade Journal (Live)</h3>
+            <p>Detailed trade entries with screenshots, entries, exits, and lessons learned.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARN TO TRADE -->
+    <section id="learn" class="section learn">
+      <div class="container">
+        <div class="section-head">
+          <h2>Learn to Trade — Beginner Course</h2>
+          <p class="muted">A compact, beginner-friendly path through Forex fundamentals, charts, and risk management.</p>
+        </div>
+
+        <div class="learn-grid">
+          <!-- left: modules -->
+          <div class="modules">
+            <div class="module" data-id="m1">
+              <div class="module-head">
+                <h3>Module 1 — What is Forex?</h3>
+                <button class="mark-btn" data-id="m1">Mark done</button>
+              </div>
+              <p>Overview of the FX market, who participates, and why currencies move.</p>
+            </div>
+
+            <div class="module" data-id="m2">
+              <div class="module-head">
+                <h3>Module 2 — Currency Pairs & Pips</h3>
+                <button class="mark-btn" data-id="m2">Mark done</button>
+              </div>
+              <p>Base vs quote currency, pip/pipette, majors/minors/exotics explained.</p>
+            </div>
+
+            <div class="module" data-id="m3">
+              <div class="module-head">
+                <h3>Module 3 — Market Sessions</h3>
+                <button class="mark-btn" data-id="m3">Mark done</button>
+              </div>
+              <p>Tokyo, London, New York sessions — when volatility changes and why.</p>
+            </div>
+
+            <div class="module" data-id="m4">
+              <div class="module-head">
+                <h3>Module 4 — Reading Charts (Candles)</h3>
+                <button class="mark-btn" data-id="m4">Mark done</button>
+              </div>
+              <p>OHLC, candlesticks, support & resistance, basic pattern recognition.</p>
+            </div>
+
+            <div class="module" data-id="m5">
+              <div class="module-head">
+                <h3>Module 5 — Risk Management</h3>
+                <button class="mark-btn" data-id="m5">Mark done</button>
+              </div>
+              <p>Position sizing, stop-loss, risk per trade, and why preserving capital matters.</p>
+            </div>
+
+            <div class="module" data-id="m6">
+              <div class="module-head">
+                <h3>Module 6 — Demo Trading & Next Steps</h3>
+                <button class="mark-btn" data-id="m6">Mark done</button>
+              </div>
+              <p>Open a demo, build small routines, keep a journal, and next learning steps.</p>
+            </div>
+          </div>
+
+          <!-- right: actions -->
+          <aside class="learn-cta">
+            <div class="progress-card">
+              <h4>Your Progress</h4>
+              <div id="progressBar" class="progress-bar"><div id="progressFill"></div></div>
+              <p id="progressText">0 / 6 modules completed</p>
+              <button id="resetProgress" class="btn btn-outline small">Reset Progress</button>
+            </div>
+
+            <div class="download-card">
+              <h4>Get the full beginner guide</h4>
+              <p>Download a PDF summary of modules to keep for offline reading.</p>
+              <a href="forex-basics.pdf" download class="btn btn-primary">Download PDF</a>
+            </div>
+
+            <div class="cta-card">
+              <h4>Ready to level up?</h4>
+              <a href="#contact" class="btn btn-primary">Contact for mentorship</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CFDs -->
+    <section id="cfds" class="section">
+      <div class="container">
+        <h2>CFDs — Quick Guide</h2>
+        <p class="muted">Contracts for Difference let you trade price movement of assets like indices, commodities, and crypto without owning them. Understand margin and leverage before trading CFDs.</p>
+        <ul class="cfds-list">
+          <li>What CFDs are and how they work</li>
+          <li>Pros & cons, fees, and financing costs</li>
+          <li>Practical tips for using CFDs responsibly</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Want mentorship, code help, or content collab? Drop a message below.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>
+            Your name
+            <input type="text" id="name" name="name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" name="email" required />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <span id="formStatus" class="muted small"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 FxPortfolio — Built by you. Powered by discipline.</small>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="Fxportfolio.js"></script>
 </body>
 </html>
